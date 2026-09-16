@@ -30,7 +30,7 @@ git log --oneline	[only shows the ash number of all commits]
 
 If your commit comment is wrong or you want to make better statement
 in your most previous commit statement, you could do this:
-git commit -m "corrected message on the most previously committed message" --amend
+git commit -m "corrected message on the most previously commit" --amend
 
 If you want to reset to previous, irrespective of when or where,
 you could use ASH number from log.	
