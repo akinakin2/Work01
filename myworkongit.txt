@@ -1,0 +1,57 @@
+GitHub will make you create an account if you don't have or sign in into your online GitHub account
+Get familiar with the GitHub desktop version because there are things in there
+
+> git config --global user.name "Your anme"
+> git config --global user.email "email@address.com"
+> git config --global init.default branch main
+
+Go to desired directory for your main/master repo and type
+> git init [.git directory will be created and you have all you need for your repo]
+> git status [this will show you files that are TRACK $ NOT tracking]
+> git add "file-name you want to track" press ENTER
+> git status "selected file color have changed from RED to GREEN" it's tracking the file now 
+
+> use "git rm --cached <file-name>" to unstages 0r UNTRACK
+
+COMMAND & USAGE
+git init "dot and enter means your storage is at the directory you are"
+git commit -m "comment about what you do"
+git add <file>... "to update what will be committed"
+
+git diff "shows the diff in Working Directory / Staging Area (Index) vs last commit"
+git diff --staged (or --cached)	"Staging Area [tracked] vs. Last Commit (HEAD)"
+git diff HEAD		Working Directory vs. Last Commit
+
+git restore <file>... "to discard changes in working directory"
+git mv "old file-name" "new file-name" [this is to rename a file using git]
+
+git log [this shows the commits you have made over time]
+git log --oneline	[only shows the ash number of all commits]
+
+If your commit comment is wrong or you want to make better statement
+in your most previous commit statement, you could do this:
+git commit -m "corrected message on the most previously committed message" --amend
+
+If you want to reset to previous, irrespective of when or where,
+you could use ASH number from log.	
+log reset Ash number of commit
+
+Git rebase -i --root	Helps to rearrange your Ash number or any other things in the editor
+
+BRANCH
+git checkout -b <branch-name> 
+git switch -c <branch-name>	Creates new branch and immediately switches your workspace to it.
+
+git branch:	Shows all local branches; the active branch is marked with an asterisk (*).
+git branch -a			Shows both local and remote-tracking branches.
+git branch -r			Displays only the branches tracked on your remote repository.
+git branch <branch-name>	Creates a new branch pointer at your current commit without switching to it.
+git branch -m <old-name> <new-name>	Renames an existing branch locally.
+git branch -d <branch-name>	Deletes a local branch only if it has already been fully merged upstream.
+git branch -D <branch-name>	Forcefully deletes a local branch, ignoring its merge status (destructive).
+
+You are merging into the present working branch/master
+> git merge -m "merging DevOps to master for more info" DevOps [branch]
+
+> git remote -v	 {Check the current remote repo, it will provide info if you have}
+> git remote remove origin	Remove/disconnect the remote repo
