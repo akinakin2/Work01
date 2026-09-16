@@ -95,3 +95,19 @@ Set an expiration and grant access to the required repository.
 Under Repository permissions, grant Contents: Read and write.
 
 Generate and copy the token immediately. 
+
+
+If you just made a commit and want to undo the commit but keep all changes staged:
+git reset --soft HEAD~1
+
+If you want to undo the commit and keep the changes, but unstaged:
+git reset HEAD~1
+
+If you want to undo the commit and throw away all its changes:
+git reset --hard HEAD~1
+
+If you've already pushed the commit, usually don't reset shared history. Instead:
+git revert HEAD
+git push
+
+Rule of thumb: not pushed → git reset; already pushed/shared → git revert.
