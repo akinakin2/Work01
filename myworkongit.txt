@@ -55,3 +55,23 @@ You are merging into the present working branch/master
 
 > git remote -v	 {Check the current remote repo, it will provide info if you have}
 > git remote remove origin	Remove/disconnect the remote repo
+
+
+If you create a repo on GitHub without Readme file, repo is EMPTY
+you can do:
+
+… create a new repository on the command line
+echo "# repo-name" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/user-name/repo-name.git
+git push -u origin main
+
+OR
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/user-name/repo-name.git
+git branch -M main
+git push -u origin main
