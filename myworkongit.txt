@@ -75,3 +75,23 @@ OR
 git remote add origin https://github.com/user-name/repo-name.git
 git branch -M main
 git push -u origin main
+
+First Push to the origin /main will require global identity
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL ADDRESS"
+
+When you commit to mail you will be required to authenticate
+GitHub username
+GitHub password: this password is the personal access token
+you will find at:
+
+Go to GitHub and open Settings.
+Select Developer settings.
+Select Personal access tokens → Fine-grained tokens. [Classic]
+Click Generate new token.
+
+Set an expiration and grant access to the required repository.
+
+Under Repository permissions, grant Contents: Read and write.
+
+Generate and copy the token immediately. 
