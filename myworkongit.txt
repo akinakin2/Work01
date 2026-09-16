@@ -50,6 +50,16 @@ git branch -m <old-name> <new-name>	Renames an existing branch locally.
 git branch -d <branch-name>	Deletes a local branch only if it has already been fully merged upstream.
 git branch -D <branch-name>	Forcefully deletes a local branch, ignoring its merge status (destructive).
 
+Want to add a PERTICULAR file to a PARTICULAR BRANCH
+$ git checkout branch
+$ git add file-name 
+
+OR
+
+Want to commit a PARTICULAR file to a PARTICULAR branch
+$ git checkout branch
+$ git commit -m "comments" file-name
+
 You are merging into the present working branch/master
 > git merge -m "merging DevOps to master for more info" DevOps [branch]
 
